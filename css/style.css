@@ -3174,6 +3174,11 @@ output {
   color: #999;
   opacity: 1;
 }
+.form-check-input {
+  position: relative;
+  margin-top: 0.3rem;
+  margin-left: -1.25rem;
+}
 .form-control:-ms-input-placeholder {
   color: #999;
 }
@@ -8802,6 +8807,7 @@ input[type="text"] {
 }
 #footer h3 {
   font-size: 15px;
+  font-weight: bold;
 }
 #footer ul.link {
   padding: 0;

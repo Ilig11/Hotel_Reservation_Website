@@ -111,7 +111,7 @@
 						<div class="modal-body">
 
 							<!--create two entry forms-->
-							<form action="search_modal" method="post">
+							<form action="insert.php" method="POST">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Email Address</label>
 									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -122,6 +122,7 @@
 									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 								</div>
 							</form>
+							
 							<input class="btn btn-primary" type="button" onclick="location.href='reservation.html';" value="Search Reservation" />
 						</div>
 					</div>
@@ -140,36 +141,36 @@
 					</button>
 					</div>
 					<div class="modal-body">
-						<form>
-
+						
+						<form action="insert.php" method="POST">
 							<div class="form-row">
-								<div class="form-group col-md-4">
+							  <div class="form-group col-md-4">
 								<label for="inputFName">First Name</label>
-								<input type="text" class="form-control" id="inputFName" name="inputFName">
-								</div>
-								<div class="form-group col-md-4">
+								<input type="text" class="form-control" id="inputFName" name="inputFName" required>
+							  </div>
+							  <div class="form-group col-md-4">
 								<label for="inputMName">Middle Name</label>
 								<input type="text" class="form-control" id="inputMName" name="inputMName">
-								</div>
-								<div class="form-group col-md-4">
+							  </div>
+							  <div class="form-group col-md-4">
 								<label for="inputFamName">Family Name</label>
-								<input type="text" class="form-control" id="inputFamName" name="inputFamName">
-								</div>
+								<input type="text" class="form-control" id="inputFamName" name="inputFamName" required>
+							  </div>
 							</div>
 
-							<div class="form-group">
+                            <div class="form-group">
 								<label for="inputEmail">Email Address</label>
-								<input type="text" class="form-control" id="inputEmail">
+								<input type="text" class="form-control" id="inputEmail" name="inputEmail" required>
 							</div>
 							
 							<div class="form-group">
-								<label for="inputNumberGuests">Number of Guests</label>
-								<input type="number" class="form-control" id="inputNumberGuests" name="inputNumberGuests" placeholder="1" min="1" max="5">
+							  <label for="inputNumberGuests">Number of Guests</label>
+							  <input type="number" class="form-control" id="inputNumberGuests" name="inputNumberGuests" placeholder="0" min="1" max="5" required>
 							</div>
-														
+													  
 							<div class="form-group">
 							<label for="inputHotel">Hotel</label>
-							<select id="inputHotel" class="form-control" name="hotel">
+							<select id="inputHotel" class="form-control" name="inputHotel" required>
 								<option selected value="">Choose...</option>
 								<option value="Manila">Manila</option>
 								<option value="Cebu">Cebu</option>
@@ -179,7 +180,7 @@
 
 							<div class="form-group">
 								<label for="inputRoom">Room</label>
-								<select id="inputRoom" class="form-control" name="room">
+								<select id="inputRoom" class="form-control" name="inputRoom" required>
 									<option selected value="">Choose...</option>
 									<option value="Single Economy">Single Economy</option>
 									<option value="Double Economy">Double Economy</option>
@@ -194,30 +195,30 @@
 							<!-- insert a date picker -->
 							<div class="form-group">
 								<label for="arrival-date-input">Arrival Date</label>
-								<input class="form-control" type="date" value="2022-08-19" id="arrival-date-input" name="arrival">
+								<input class="form-control" type="date" value="2022-08-19" id="arrival-date-input" name="arrival" required>
 							</div>
 
 							<div class="form-group">
 								<label for="departure-date-input">Departure Date</label>
-								<input class="form-control" type="date" value="2022-08-19" id="departure-date-input" name="departure">
+								<input class="form-control" type="date" value="2022-08-19" id="departure-date-input" name="departure" required>
 							</div>
 							<!-- end of date picker -->
 
 							<div class="form-group">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="gridCheck" required>
-									<label class="form-check-label" for="gridCheck">
+								  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+								  <label class="form-check-label" for="gridCheck">
 									I agree to the <a href=rules.pdf>rules and policies</a> of the hotel
-									</label>
+								  </label>
 								</div>
-								</div>
+							  </div>
 
 							<button type="submit" class="btn btn-primary">Sign in</button>
-							</form>
+						</form>
 					</div>	
 				</div>	
 				</div>
-			</div>	
+			</div>		
 
 
 			<aside id="fh5co-hero" class="js-fullheight">
