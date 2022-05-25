@@ -70,20 +70,9 @@
 									<li>
 										<a href="hotel.html" class="fh5co-sub-ddown">Hotel</a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="#">Luxe Hotel</a></li>
-											<li><a href="#">Deluxe Hotel</a></li>
-											<li>
-												<a href="#" class="fh5co-sub-ddown">King Hotel</a>
-												<ul class="fh5co-sub-menu">
-													<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-													<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-													<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-													<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-													<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-													<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Five Star Hotel</a></li> 
+											<li><a href="#">Luxe Hotel - Manila</a></li>
+											<li><a href="#">Deluxe Hotel - Cebu</a></li>
+											<li><a href="#">Five Star Hotel - Cagayan de Oro</a></li> 
 										</ul>
 									</li>
 									<li><a href="exampleModalCenter1" data-toggle="modal" data-target="#exampleModalCenter1">Book</a></li>
@@ -111,19 +100,20 @@
 						<div class="modal-body">
 
 							<!--create two entry forms-->
-							<form action="insert.php" method="POST">
+							<form action="search.php" method="POST">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Email Address</label>
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+									<input type="email" class="form-control" name="SearchEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
 									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Last Name</label>
-									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									<input type="text" class="form-control" name="SearchFamName" placeholder="Password" required>
 								</div>
+								<button type="submit" class="btn btn-primary">Sign in</button>
 							</form>
 							
-							<input class="btn btn-primary" type="button" onclick="location.href='reservation.html';" value="Search Reservation" />
+							
 						</div>
 					</div>
 				</div>
@@ -172,9 +162,9 @@
 							<label for="inputHotel">Hotel</label>
 							<select id="inputHotel" class="form-control" name="inputHotel" required>
 								<option selected value="">Choose...</option>
-								<option value="Manila">Manila</option>
-								<option value="Cebu">Cebu</option>
-								<option value="Cagayan de Oro">Cagayan de Oro</option>
+								<option value="Luxe Hotel - Manila">Luxe Hotel - Manila</option>
+								<option value="Deluxe Hotel - Cebu">Deluxe Hotel - Cebu</option>
+								<option value="King Hotel - Cagayan de Oro">King Hotel - Cagayan de Oro</option>
 							</select>
 							</div>
 
@@ -576,7 +566,7 @@
 						<div class="col-md-3">
 							<div class="copyright">
 								<p><small>&copy; ITCC 13.1 Final Project <br> All Rights Reserved. <br>
-								Designed by <a href="https://github.com/Yoshilute" target="_blank">Team Group Squad</a> </small></p>
+								Designed by <a href="https://github.com/Yoshilute/Hotel_Reservation_Website" target="_blank">Team Group Squad</a> </small></p>
 							</div>
 						</div>
 					</div>
