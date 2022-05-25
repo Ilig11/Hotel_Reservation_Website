@@ -15,7 +15,7 @@ if (!empty($first_name) || !empty($middle_name) || !empty($family_name) || !empt
     $dbUsername = "root";
     $dbPassword = "";
     $dbname = "website";
-    //create connection
+    // Establish connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
     if (mysqli_connect_error()) {
         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
@@ -34,19 +34,16 @@ if (!empty($first_name) || !empty($middle_name) || !empty($family_name) || !empt
             $stmt = $conn->prepare($INSERT);
             $stmt->bind_param("ssssissss", $first_name, $middle_name, $family_name, $email, $guests, $hotel, $room, $check_in, $check_out);
             $stmt->execute();
-            // create a message to display on the reservation page
+            // Message to display on the reservation page
             $message = "Thank you for your reservation. We will contact you shortly.";
             echo "<script type='text/javascript'>alert('$message');</script>";
             header("refresh:0; url=index.php");
-            // redirect to homepage
-        
+            // Redirect to homepage
 
         } else {
-            
-            // create a message dialog box then return to homepage
+            // Message dialog box then return to homepage
             echo "<script type='text/javascript'>alert('Someone already reserved that email');</script>";
-            header("refresh:0; url=index.php");
-            
+            header("refresh:0; url=index.php");  
         }
         $stmt->close();
         $conn->close();
